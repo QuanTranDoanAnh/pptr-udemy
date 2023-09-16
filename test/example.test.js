@@ -10,6 +10,7 @@ describe('My First Puppeteer Test', () => {
     })
     const page = await browser.newPage()
     await page.goto('http://example.com')
+    await new Promise(r => setTimeout(r, 3000)) // waitFor and waitForTimeout all deprecated
     await page.waitForSelector('h1')
     await browser.close()
   })
