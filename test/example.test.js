@@ -5,16 +5,18 @@ describe('My First Puppeteer Test', () => {
     const browser = await puppeteer.launch({
       headless: false,
       defaultViewport: null,
-      slowMo: 10, //slowdown for user to see effects
+      slowMo: 250, //slowdown for user to see effects
       devtools: false
     })
     const page = await browser.newPage()
     await page.goto('http://example.com')
-    await new Promise(r => setTimeout(r, 3000)) // waitFor and waitForTimeout all deprecated
     await page.waitForSelector('h1')
-    await page.reload() // reload the browser
-    await new Promise(r => setTimeout(r, 3000)) // waitFor and waitForTimeout all deprecated
+    await page.goto('https://dev.to')
+    await page.waitForSelector('#topbar')
+    await page.goBack()
     await page.waitForSelector('h1')
+    await page.goForward()
+    await page.waitForSelector('#topbar')
     await browser.close()
   })
 })
