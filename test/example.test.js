@@ -12,6 +12,9 @@ describe('My First Puppeteer Test', () => {
     await page.goto('http://example.com')
     await new Promise(r => setTimeout(r, 3000)) // waitFor and waitForTimeout all deprecated
     await page.waitForSelector('h1')
+    await page.reload() // reload the browser
+    await new Promise(r => setTimeout(r, 3000)) // waitFor and waitForTimeout all deprecated
+    await page.waitForSelector('h1')
     await browser.close()
   })
 })
