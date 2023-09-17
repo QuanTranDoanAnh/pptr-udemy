@@ -12,7 +12,8 @@ describe('Test DevExpress Testcafe Example page', () => {
     await page.goto('https://devexpress.github.io/testcafe/example/')
     await page.type('#developer-name', 'Albert', { delay: 100}) // type a value into a textbox
     await new Promise(r => setTimeout(r, 5000)) // wait for 5 seconds
-    await page.click('#tried-test-cafe', { count: 2, delay: 1000})
+    await page.click('#tried-test-cafe', { count: 1, delay: 0})
+    await page.select('#preferred-interface', 'JavaScript API') // id of dropdown, seclected option's value
     await new Promise(r => setTimeout(r, 5000)) // wait for 5 seconds
     await browser.close()
   })
