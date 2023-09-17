@@ -14,6 +14,10 @@ describe('Test DevExpress Testcafe Example page', () => {
     await new Promise(r => setTimeout(r, 5000)) // wait for 5 seconds
     await page.click('#tried-test-cafe', { count: 1, delay: 0})
     await page.select('#preferred-interface', 'JavaScript API') // id of dropdown, seclected option's value
+    const message = 'Lets fill that message with some texts'
+    await page.type('#comments', message)
+    await page.click('#submit-button')
+    await page.waitForSelector('.result-content')
     await new Promise(r => setTimeout(r, 5000)) // wait for 5 seconds
     await browser.close()
   })
