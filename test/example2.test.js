@@ -12,6 +12,8 @@ describe('New Puppeteer Test with Example.com', () => {
     await page.goto('http://example.com')
     const title = await page.title()
     const url = await page.url()
+    const text = await page.$eval('h1', el => el.textContent)
+    console.log('Text in the H1: ' + text)
     await browser.close()
   })
 })
