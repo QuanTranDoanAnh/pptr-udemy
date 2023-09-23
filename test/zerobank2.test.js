@@ -6,7 +6,7 @@ describe('New Puppeteer Test with zero.webappsecurity.com', () => {
     const browser = await puppeteer.launch({
       headless: false,
       defaultViewport: null,
-      slowMo: 250, //slowdown for user to see effects
+      slowMo: 10, //slowdown for user to see effects
       devtools: false
     })
     const page = await browser.newPage()
@@ -18,8 +18,8 @@ describe('New Puppeteer Test with zero.webappsecurity.com', () => {
     await page.click('#signin_button')
 
     //longer way
-    await page.waitForFunction(() => !document.querySelector('#signin_button'))
-    
+    //await page.waitForFunction(() => !document.querySelector('#signin_button'))
+    await page.waitForSelector('#signin_button', { hidden: true, timeout: 3000 });
     await browser.close()
   })
 })
