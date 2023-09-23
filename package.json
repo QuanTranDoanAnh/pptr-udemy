@@ -4,7 +4,7 @@
   "description": "Automated software testing with Puppeteer",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout=30000 ./test/example2.test.js --reporter=list"
+    "test": "mocha --timeout=30000 ./test/zerobank.test.js --reporter=list"
   },
   "keywords": [
     "Puppeteer",
