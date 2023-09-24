@@ -1,7 +1,6 @@
 const puppeteer = require('puppeteer')
 const expect = require('chai').expect
-const { getText } = require('../lib/helpers')
-const { getCount } = require('../lib/helpers')
+const { getText, getCount } = require('../lib/helpers')
 
 describe('New Puppeteer Test with Example.com', () => {
   it('should launch the browser for new test', async () => {
