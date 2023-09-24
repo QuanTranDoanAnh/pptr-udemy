@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer')
 const expect = require('chai').expect
+const { click } = require('../lib/helpers')
 
 describe('New Puppeteer Test with zero.webappsecurity.com', () => {
   it('should launch the browser for Simulation', async () => {
@@ -14,8 +15,9 @@ describe('New Puppeteer Test with zero.webappsecurity.com', () => {
     await page.setDefaultNavigationTimeout(20000)
     
     await page.goto('http://zero.webappsecurity.com/index.html')
-    await page.waitForSelector('#signin_button')
-    await page.click('#signin_button')
+    //await page.waitForSelector('#signin_button')
+    //await page.click('#signin_button')
+    await click(page, '#signin_button')
 
     //longer way
     //await page.waitForFunction(() => !document.querySelector('#signin_button'))

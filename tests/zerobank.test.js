@@ -1,5 +1,4 @@
 const puppeteer = require('puppeteer')
-const expect = require('chai').expect
 
 describe('New Puppeteer Test with zero.webappsecurity.com', () => {
   it('should launch the browser for Simulation', async () => {
