@@ -4,9 +4,9 @@
   "description": "Automated software testing with Puppeteer",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout=30000 ./test/example.test.js --reporter=list",
-    "test:device": "mocha --timeout=30000 --reporter=list ./test/device.test.js",
-    "test:incognito": "mocha --timeout=30000 --reporter=list ./test/incognito.test.js"
+    "test": "mocha --timeout=30000 ./tests --reporter=list",
+    "test:device": "mocha --timeout=30000 --reporter=list ./tests/device.test.js",
+    "test:incognito": "mocha --timeout=30000 --reporter=list ./tests/incognito.test.js"
   },
   "keywords": [
     "Puppeteer",
