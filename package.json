@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha --timeout=30000 ./tests --reporter=list",
     "test:device": "mocha --timeout=30000 --reporter=list ./tests/device.test.js",
-    "test:incognito": "mocha --timeout=30000 --reporter=list ./tests/incognito.test.js"
+    "test:incognito": "mocha --timeout=30000 --reporter=list ./tests/incognito.test.js",
+    "test:e2e": "mocha --timeout=30000 --reporter=list ./tests/e2e/*.test.js"
   },
   "keywords": [
     "Puppeteer",
